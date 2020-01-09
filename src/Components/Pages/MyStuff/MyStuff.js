@@ -5,7 +5,7 @@ class MyStuff extends React.Component {
     return (
       <h1>My Stuff</h1>
     );
- }
+  }
 }
 
 export default MyStuff;

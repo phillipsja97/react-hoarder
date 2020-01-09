@@ -5,7 +5,7 @@ class SingleStuff extends React.Component {
     return (
       <h1>Single Stuff</h1>
     );
- }
+  }
 }
 
 export default SingleStuff;
