@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import itemsData from '../../../Helpers/Data/itemsData';
 import authData from '../../../Helpers/Data/authData';
-import SingleStuff from '../SingleStuff/SingleStuff';
+import SingleItem from '../SingleItem/SingleItem';
 
 class MyStuff extends React.Component {
   state = {
@@ -36,7 +36,7 @@ class MyStuff extends React.Component {
       <h1>My Stuff</h1>
       <button className="btn btn-danger">Add An Item</button>
       <div className="d-flex flex-wrap justify-content-center">
-        { this.state.items.map((item) => <SingleStuff key={item.id} item={item} deleteItem={this.deleteItem} />)}
+        { this.state.items.map((item) => <SingleItem key={item.id} item={item} deleteItem={this.deleteItem} />)}
       </div>
       </div>
     );
