@@ -1,6 +1,7 @@
 import React from 'react';
 import itemsData from '../../../Helpers/Data/itemsData';
 import authData from '../../../Helpers/Data/authData';
+import './Edit.scss';
 
 class Edit extends React.Component {
   state = {
@@ -52,7 +53,8 @@ class Edit extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="Edit">
+      <h1 className="d-flex justify-content-center">Edit An Item:</h1>
       <form className='col-6 offset-3 HoardForm'>
       <div className="form-group">
         <label htmlFor="item-name">Item Name:</label>

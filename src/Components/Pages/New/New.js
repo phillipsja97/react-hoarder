@@ -1,6 +1,7 @@
 import React from 'react';
 import authData from '../../../Helpers/Data/authData';
 import itemsData from '../../../Helpers/Data/itemsData';
+import './New.scss';
 
 class New extends React.Component {
   state = {
@@ -39,7 +40,8 @@ class New extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="New">
+      <h1 className="d-flex justify-content-center">Add A New Item</h1>
       <form className='col-6 offset-3 HoardForm'>
       <div className="form-group">
         <label htmlFor="item-name">Item Name:</label>
