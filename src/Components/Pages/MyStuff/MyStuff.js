@@ -29,14 +29,22 @@ class MyStuff extends React.Component {
       .catch((errorFromDelete) => (errorFromDelete));
   }
 
+  addNewItem = (newItem) => {
+    itemsData.addAnItem(newItem)
+      .then(() => {
+        this.getItems();
+      })
+      .catch((errorFromSaveWalk) => console.error(errorFromSaveWalk));
+  }
+
   render() {
     const { items } = this.state;
     return (
       <div>
       <h1>My Stuff</h1>
-      <button className="btn btn-danger">Add An Item</button>
+      <Link className="btn btn-outline-primary" to={'/stuff/new'}>Add A New Item</Link>
       <div className="d-flex flex-wrap justify-content-center">
-        { this.state.items.map((item) => <SingleItem key={item.id} item={item} deleteItem={this.deleteItem} />)}
+        { this.state.items.map((item) => <SingleItem key={item.id} item={item} deleteItem={this.deleteItem} addNewItem={this.addNewItem} />)}
       </div>
       </div>
     );

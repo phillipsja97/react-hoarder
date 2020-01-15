@@ -26,14 +26,16 @@ class SingleStuff extends React.Component {
   render() {
     const { item } = this.state;
     return (
-      <div className="item col-4">
+      <div className="d-flex justify-content-center">
+      <div className="item col-4 d-flex justify-content-center">
       <div className="card" id="itemCard">
-          <button className="btn btn-danger deleteItemButton col-1" onClick={this.deleteItemEvent}>X</button>
             <div className="card-body">
               <h5 className="card-title">{item.itemName}</h5>
+              <img className="itemImage" src={item.itemImage} alt={'item image'}></img>
               <p className="card-text">{item.itemDescription}</p>
         </div>
       </div>
+    </div>
     </div>
     );
   }

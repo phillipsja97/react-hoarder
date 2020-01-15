@@ -15,6 +15,7 @@ class SingleItem extends React.Component {
     deleteItem(item.id);
   }
 
+
   render() {
     const { item } = this.props;
     const itemPathId = this.props.item.id;
